@@ -30,6 +30,13 @@ class Fan:
          self.__state = False
          self.speed = 0
 
+    def is_on(self):
+         return self.__state
+    def speed(self):
+         return self.__speed
+    def brand(self):
+         return self.__brand
+
     
 
 
@@ -58,7 +65,7 @@ Parameters:    fan - a fan object
 Returns:    None
 """
 def turn_off(fan):
-    fan. # please replace with your solution
+    fan.turn_off_fan(fan) # please replace with your solution
     
 
 """
