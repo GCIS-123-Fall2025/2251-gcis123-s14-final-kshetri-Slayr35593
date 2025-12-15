@@ -26,8 +26,7 @@ def even_digits(integer):
     
     
     queue = []
-    for num in integer:
-        queue.append(num)
+    queue.append(integer)
         
     for num in queue:
         if num % 2 != 0:
@@ -78,6 +77,6 @@ def test_even_digits_1234567890():
     # analyze
     assert expected == actual
 
-#print(even_digits(34))
+print(even_digits(34))
 
 
