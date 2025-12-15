@@ -21,10 +21,33 @@ Examples:
 from node_stack import Stack
 
 def balance_parenthesis(a_string):
-    pass # please replace with your solution
+    count_left=0
+    count_right = 0
+    savenumcount = -1
+    savenum = 0
+    for char in a_string:
+        
+        savenumcount += 1
+        if char == "(":
+            count_left += 1
+            savenum = savenumcount
+        if char == ")":
+            count_right += 1
+    if count_left > count_right:
+        return savenum
+    elif count_right > count_left:
+        return -1
+    elif count_left == count_right:
+        return 0
+    else:
+        return "Error???"
+        
+ # please replace with your solution
 
 
-def main():     pass
- 
+def main():
+    print(balance_parenthesis("()----)"))
+    print(balance_parenthesis("--(---(-----)--"))
+    print(balance_parenthesis("-------() -- ( () )"))
 
 if __name__ == "__main__":    main()
