@@ -31,7 +31,12 @@ class Item:
       else:
         return False
       
-
+    def get_code(self):
+      return self.code
+    def get_name(self):
+      return self.name
+    def get_price(self):
+      return self.price
 
 # manual test from main() method
 def main():
