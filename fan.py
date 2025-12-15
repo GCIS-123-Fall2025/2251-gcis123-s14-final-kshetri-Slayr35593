@@ -32,7 +32,7 @@ class Fan:
          self.speed = 0
 
     def is_on(self):
-         return self.__state
+         return self.state
     """
     def speed(self):
          return self.__speed
