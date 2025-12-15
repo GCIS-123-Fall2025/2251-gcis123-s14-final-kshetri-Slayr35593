@@ -18,11 +18,28 @@ Write down the manual test by creating at least two items.
 """
 
 class Item:
-    pass # please replace with your solution
+    def __init__(self, __code, __name, __price):
+      self.code = __code
+      self.name = __name
+      self.price = __price
+    def __repr__(self):
+      return ("("+ str(self.code)+ ", "+ str(self.name)+ ", "+ str(self.price)+ ")")
+
+    def is_same_item(self, other):
+      if self.code == other.code:
+        return True
+      else:
+        return False
+      
 
 
 # manual test from main() method
-def main():     pass
+def main():
+  apple = Item("APPL-0001", "Apple", 2)
+  same_apple = Item("APPL-0001", "Ripoff Apple", 15)
+  print(same_apple)
+  print(apple)
+  print(apple.is_same_item(same_apple))
  
 
 if __name__ == "__main__":    main()
