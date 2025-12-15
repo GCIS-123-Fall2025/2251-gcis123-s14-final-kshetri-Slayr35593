@@ -23,7 +23,17 @@ For credit your function must use a stack or a queue in a significant way.
 """
 
 def even_digits(integer):
-    pass # please replace with your solution
+    queue = []
+    for num in integer:
+        queue.append(num)
+        
+    for num in queue:
+        if num // 2 != 0:
+            queue.pop()
+        else:
+            continue
+    return queue
+        # please replace with your solution
 
 
 
@@ -65,3 +75,5 @@ def test_even_digits_1234567890():
     actual = even_digits(integer)
     # analyze
     assert expected == actual
+
+print(even_digits(34))
